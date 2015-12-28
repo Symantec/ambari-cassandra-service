@@ -36,9 +36,9 @@ curl -u admin:$PASSWORD -i -H 'X-Requested-By: ambari' -X DELETE http://$AMBARI_
 
 #if above errors out, run below first to fully stop the service
 #curl -u admin:$PASSWORD -i -H 'X-Requested-By: ambari' -X PUT -d '{"RequestInfo": {"context" :"Stop $SERVICE via REST"}, "Body": {"ServiceInfo": {"state": "INSTALLED"}}}' http://$AMBARI_HOST:8080/api/v1/clusters/$CLUSTER/services/$SERVICE
-
- - Remove artifacts
-    ```
-    rm -rf /opt/flink*
-    rm /tmp/flink.tgz
-    ```   
+  ```
+  - Remove artifacts
+  ```
+  rm -rf /var/lib/cassandra/*
+  
+  ```   
