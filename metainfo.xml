@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+<metainfo>
+    <schemaVersion>2.0</schemaVersion>
+    <services>
+        <service>
+            <name>Cassandra</name>
+            <displayName>Cassandra</displayName>
+            <comment>Distributed database</comment>
+            <version>2.1</version>
+            <components>
+                <!-- <component>
+                    <name>CASSANDRA-NODES</name>
+                    <displayName>Cluster Nodes</displayName>
+                    <category>MASTER</category>
+                    <cardinality>1+</cardinality>
+                    <commandScript>
+                        <script>scripts/cassandra_master.py</script>
+                        <scriptType>PYTHON</scriptType>
+                        <timeout>600</timeout>
+                    </commandScript>
+                </component> -->
+               <component>
+                    <name>Cluster-Hosts</name>
+                    <displayName>Cluster Nodes</displayName>
+                    <category>SLAVE</category>
+                    <cardinality>1+</cardinality>
+                    <commandScript>
+                        <script>scripts/cassandra_master.py</script>
+                        <scriptType>PYTHON</scriptType>
+                        <timeout>600</timeout>
+                    </commandScript>
+                </component>
+            </components>
+            <osSpecifics>
+                <osSpecific>
+                    <osFamily>any</osFamily>
+                    <packages>
+                        <package>
+                            <name>dsc21-2.1.11-1</name>
+                            <!-- <name>dsc21-2.1.11-1 cassandra2.1.11-1</name> -->
+                        </package>
+                        <package>
+                            <name>opscenter</name>
+                        </package>
+                    </packages>
+                </osSpecific>
+            </osSpecifics>
+            <commandScript>
+                <script>scripts/service_check.py</script>
+                <scriptType>PYTHON</scriptType>
+                <timeout>300</timeout>
+            </commandScript>
+            <configuration-dependencies>
+                  <config-type>cassandra-env</config-type>
+            </configuration-dependencies>
+            <restartRequiredAfterChange>true</restartRequiredAfterChange>
+            <!--
+            <configuration-dependencies>
+                <config-type>my-config-env</config-type>
+            </configuration-dependencies>
+            -->
+        </service>
+    </services>
+</metainfo>

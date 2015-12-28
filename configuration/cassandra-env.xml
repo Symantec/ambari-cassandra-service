@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+
+<configuration>
+   <property>
+    <name>cassandra_user</name>
+    <value>cassandra</value>
+    <property-type>USER</property-type>
+    <description></description>
+  </property>
+  <property>
+   <name>smoke_test_user</name>
+   <value>smoke</value>
+   <property-type>USER</property-type>
+   <description></description>
+ </property>
+  <property>
+    <name>cassandra_log_dir</name>
+    <value>/var/log/cassandra</value>
+    <description>Log directory for elastic</description>
+  </property>
+  <property>
+    <name>cassandra_pid_dir</name>
+    <value>/var/run/cassandra</value>
+    <description>This is location of pid file for cassandra</description>
+  </property>
+</configuration>

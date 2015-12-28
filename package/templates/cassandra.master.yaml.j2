@@ -1,0 +1,85 @@
+cluster_name: {{cluster_name_py}}
+num_tokens: {{num_tokens}}
+hinted_handoff_enabled: {{hinted_handoff_enabled}}
+hinted_handoff_throttle_in_kb: {{hinted_handoff_throttle_in_kb}}
+max_hints_delivery_threads: {{max_hints_delivery_threads}}
+batchlog_replay_throttle_in_kb: {{batchlog_replay_throttle_in_kb}}
+authenticator: {{authenticator}}
+authorizer: {{authorizer}}
+permissions_validity_in_ms: {{permissions_validity_in_ms}}
+partitioner: {{partitioner}}
+data_file_directories:
+    - /var/lib/cassandra/data
+commitlog_directory: {{commitlog_directory}}
+disk_failure_policy: {{disk_failure_policy}}
+commit_failure_policy: {{commit_failure_policy}}
+key_cache_size_in_mb: {{key_cache_size_in_mb}}
+key_cache_save_period: {{key_cache_save_period}}
+row_cache_size_in_mb: {{row_cache_size_in_mb}}
+row_cache_save_period: {{row_cache_save_period}}
+counter_cache_size_in_mb: {{counter_cache_size_in_mb}}
+counter_cache_save_period: {{counter_cache_save_period}}
+saved_caches_directory: {{saved_caches_directory}}
+commitlog_sync: {{commitlog_sync}}
+commitlog_sync_period_in_ms: {{commitlog_sync_period_in_ms}}
+commitlog_segment_size_in_mb: {{commitlog_segment_size_in_mb}}
+seed_provider:
+    - class_name: {{seed_provider_class_name}}
+      parameters:
+          - seeds: {{seed_provider_parameters_seeds}}
+concurrent_reads: {{concurrent_reads}}
+concurrent_writes: {{concurrent_writes}}
+concurrent_counter_writes: {{concurrent_counter_writes}}
+memtable_allocation_type: {{memtable_allocation_type}}
+index_summary_capacity_in_mb: {{index_summary_capacity_in_mb}}
+index_summary_resize_interval_in_minutes: {{index_summary_resize_interval_in_minutes}}
+trickle_fsync: {{trickle_fsync}}
+trickle_fsync_interval_in_kb: {{trickle_fsync_interval_in_kb}}
+storage_port: {{storage_port}}
+ssl_storage_port: {{ssl_storage_port}}
+listen_address: {{listen_address}}
+start_native_transport: {{start_native_transport}}
+native_transport_port: {{native_transport_port}}
+start_rpc: {{start_rpc}}
+rpc_address: {{rpc_address}}
+rpc_port: {{rpc_port}}
+broadcast_rpc_address: {{broadcast_rpc_address}}
+rpc_keepalive: {{rpc_keepalive}}
+rpc_server_type: {{rpc_server_type}}
+thrift_framed_transport_size_in_mb: {{thrift_framed_transport_size_in_mb}}
+incremental_backups: {{incremental_backups}}
+snapshot_before_compaction: {{snapshot_before_compaction}}
+auto_snapshot: {{auto_snapshot}}
+tombstone_warn_threshold: {{tombstone_warn_threshold}}
+tombstone_failure_threshold: {{tombstone_failure_threshold}}
+column_index_size_in_kb: {{column_index_size_in_kb}}
+batch_size_warn_threshold_in_kb: {{batch_size_warn_threshold_in_kb}}
+compaction_throughput_mb_per_sec: {{compaction_throughput_mb_per_sec}}
+compaction_large_partition_warning_threshold_mb: {{compaction_large_partition_warning_threshold_mb}}
+sstable_preemptive_open_interval_in_mb: {{sstable_preemptive_open_interval_in_mb}}
+read_request_timeout_in_ms: {{read_request_timeout_in_ms}}
+range_request_timeout_in_ms: {{range_request_timeout_in_ms}}
+write_request_timeout_in_ms: {{write_request_timeout_in_ms}}
+counter_write_request_timeout_in_ms: {{counter_write_request_timeout_in_ms}}
+cas_contention_timeout_in_ms: {{cas_contention_timeout_in_ms}}
+truncate_request_timeout_in_ms: {{truncate_request_timeout_in_ms}}
+request_timeout_in_ms: {{request_timeout_in_ms}}
+cross_node_timeout: {{cross_node_timeout}}
+endpoint_snitch: {{endpoint_snitch}}
+dynamic_snitch_update_interval_in_ms: {{dynamic_snitch_update_interval_in_ms}}
+dynamic_snitch_reset_interval_in_ms: {{dynamic_snitch_reset_interval_in_ms}}
+dynamic_snitch_badness_threshold: {{dynamic_snitch_badness_threshold}}
+request_scheduler: {{request_scheduler}}
+server_encryption_options:
+    internode_encryption: {{server_encryption_options_internode_encryption}}
+    keystore: {{server_encryption_options_keystore}}
+    keystore_password: {{server_encryption_options_keystore_password}}
+    truststore: {{server_encryption_options_truststore}}
+    truststore_password: {{server_encryption_options_truststore_password}}
+client_encryption_options:
+    enabled: {{client_encryption_options_enabled}}
+    keystore: {{client_encryption_options_keystore}}
+    keystore_password: {{client_encryption_options_keystore_password}}
+
+internode_compression: {{internode_compression}}
+inter_dc_tcp_nodelay: {{inter_dc_tcp_nodelay}}
