@@ -18,17 +18,11 @@ def cassandra():
               recursive=True
           )
 
-    # File(format("{conf_dir}/cassandra-env.sh"),
-    #       owner=params.cassandra_user,
-    #       content=InlineTemplate(params.cassandra_env_sh_template)
-    #  )
-
     configurations = params.config['configurations']['cassandra-site']
 
     File(format("{conf_dir}/cassandra.yaml"),
        content=Template(
-                        "cassandra.master.yaml.j2", #same for master and slave so from cassandra master and slave this method is called
+                        "cassandra.master.yaml.j2", 
                         configurations = configurations),
        owner=params.cassandra_user,
-       group=params.user_group # where are they created
-    )
+       group=params.user_group 

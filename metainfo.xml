@@ -8,17 +8,7 @@
             <comment>Distributed database</comment>
             <version>2.1</version>
             <components>
-                <!-- <component>
-                    <name>CASSANDRA-NODES</name>
-                    <displayName>Cluster Nodes</displayName>
-                    <category>MASTER</category>
-                    <cardinality>1+</cardinality>
-                    <commandScript>
-                        <script>scripts/cassandra_master.py</script>
-                        <scriptType>PYTHON</scriptType>
-                        <timeout>600</timeout>
-                    </commandScript>
-                </component> -->
+                
                <component>
                     <name>Cluster-Hosts</name>
                     <displayName>Cluster Nodes</displayName>
@@ -37,7 +27,6 @@
                     <packages>
                         <package>
                             <name>dsc21-2.1.11-1</name>
-                            <!-- <name>dsc21-2.1.11-1 cassandra2.1.11-1</name> -->
                         </package>
                         <package>
                             <name>opscenter</name>
@@ -54,11 +43,7 @@
                   <config-type>cassandra-env</config-type>
             </configuration-dependencies>
             <restartRequiredAfterChange>true</restartRequiredAfterChange>
-            <!--
-            <configuration-dependencies>
-                <config-type>my-config-env</config-type>
-            </configuration-dependencies>
-            -->
+            
         </service>
     </services>
 </metainfo>

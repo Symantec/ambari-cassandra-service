@@ -2,7 +2,7 @@
 """
 Cassandra Params configurations
 """
-# ambari-ajak-test.bpaas-dev.local
+
 from resource_management.libraries.functions.version import format_hdp_stack_version, compare_versions
 from resource_management import *
 import commands
@@ -14,7 +14,6 @@ cassandra_home = '/etc/cassandra/'
 cassandra_bin = '/usr/sbin/cassandra'
 cassandra_pid_dir = config['configurations']['cassandra-env']['cassandra_pid_dir']
 cassandra_pid_file = format("{cassandra_pid_dir}/cassandra.pid")
-#cassandra_pid_file = "/var/run/cassandra/cassandra.pid"
 conf_dir = "/etc/cassandra/conf"
 cassandra_user = config['configurations']['cassandra-env']['cassandra_user']
 log_dir = config['configurations']['cassandra-env']['cassandra_log_dir']
@@ -64,8 +63,7 @@ trickle_fsync_interval_in_kb=config['configurations']['cassandra-site']['trickle
 storage_port=config['configurations']['cassandra-site']['storage_port']
 ssl_storage_port=config['configurations']['cassandra-site']['ssl_storage_port']
 
-# a,listen_address1=commands.getstatusoutput('hostname -i')
-# listen_address=listen_address1.split()[0]
+
 a,listen_address=commands.getstatusoutput("hostname -i | awk '{print $NF}'")
 start_native_transport=config['configurations']['cassandra-site']['start_native_transport']
 native_transport_port=config['configurations']['cassandra-site']['native_transport_port']

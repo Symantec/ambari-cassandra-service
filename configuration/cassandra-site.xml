@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
-<!-- Elastic search Configurations -->
+
 
 <configuration supports_final="true">
 	<!-- Health Check Configurations -->
@@ -483,6 +483,4 @@
 		<value>cassandra</value>
 		<description></description>
 	</property>
-
-
 </configuration>
