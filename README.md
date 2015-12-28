@@ -23,7 +23,8 @@ On bottom left -> Actions -> Add service -> check Cassandra -> Next -> check nod
 - To remove the Cassandra service: 
   - Stop the service via Ambari
   - Unregister the service
-  -     ```
+
+  ```
 export SERVICE=Cassandra
 export PASSWORD=admin
 export AMBARI_HOST=localhost
