@@ -43,7 +43,7 @@ On bottom left -> Actions -> Add service -> check Cassandra -> Next -> check nod
 - You can see the parameters you configured under 'Configs' tab
 ![Image](../master/screenshots/Installed-service-config.png?raw=true)
 
-
+```
 #### Remove service
 
 - To remove the Cassandra service: 
