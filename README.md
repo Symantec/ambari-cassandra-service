@@ -31,7 +31,7 @@ service ambari restart
 #non sandbox
 sudo service ambari-server restart
 ```
-```
+
 - Then you can click on 'Add Service' from the 'Actions' dropdown menu in the bottom left of the Ambari dashboard:
 
 On bottom left -> Actions -> Add service -> check Cassandra -> Next -> check nodes to be present in the cluster and act as client-> Next -> Change any config you like (e.g. install dir, memory sizes, num containers or values in cassandra.yaml) -> Next -> Deploy
@@ -43,7 +43,7 @@ On bottom left -> Actions -> Add service -> check Cassandra -> Next -> check nod
 - You can see the parameters you configured under 'Configs' tab
 ![Image](../master/screenshots/Installed-service-config.png?raw=true)
 
-```
+
 #### Remove service
 
 - To remove the Cassandra service: 
