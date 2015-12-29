@@ -35,9 +35,11 @@ sudo service ambari-server restart
 - Then you can click on 'Add Service' from the 'Actions' dropdown menu in the bottom left of the Ambari dashboard:
 
 On bottom left -> Actions -> Add service -> check Cassandra -> Next -> check nodes to be present in the cluster and act as client-> Next -> Change any config you like (e.g. install dir, memory sizes, num containers or values in cassandra.yaml) -> Next -> Deploy
+Add the Ip address of all the seed nodes in the ring. It can be 1 to many. Add comma separated IP/Hostname value in quotes
 
+ ![Image](../master/screenshots/Initial-config.png?raw=true)
 
-- On successful deployment you will see the Flink service as part of Ambari stack and will be able to start/stop the service from here:
+- On successful deployment you will see the Cassaandra service as part of Ambari stack and will be able to start/stop the service from here:
  ![Image](../master/screenshots/Installed-service-stop.png?raw=true)
 
 - You can see the parameters you configured under 'Configs' tab
