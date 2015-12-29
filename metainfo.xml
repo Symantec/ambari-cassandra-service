@@ -8,7 +8,6 @@
             <comment>Distributed database</comment>
             <version>2.1</version>
             <components>
-                
                <component>
                     <name>Cluster-Hosts</name>
                     <displayName>Cluster Nodes</displayName>
@@ -20,13 +19,24 @@
                         <timeout>600</timeout>
                     </commandScript>
                 </component>
+                <component>
+                  <name>Cluster_client</name>
+                  <displayName>Cluster Client</displayName>
+                  <category>CLIENT</category>
+                  <cardinality>0+</cardinality>
+                  <commandScript>
+                    <script>scripts/clients.py</script>
+                    <scriptType>PYTHON</scriptType>
+                    <timeout>600</timeout>
+                  </commandScript>
+                </component>
             </components>
             <osSpecifics>
                 <osSpecific>
                     <osFamily>any</osFamily>
                     <packages>
                         <package>
-                            <name>dsc21-2.1.11-1</name>
+                            <name>dsc21</name>
                         </package>
                         <package>
                             <name>opscenter</name>
@@ -43,7 +53,7 @@
                   <config-type>cassandra-env</config-type>
             </configuration-dependencies>
             <restartRequiredAfterChange>true</restartRequiredAfterChange>
-            
+
         </service>
     </services>
 </metainfo>

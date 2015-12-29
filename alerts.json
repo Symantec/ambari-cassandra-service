@@ -5,7 +5,7 @@
       {
         "name": "Cassandra_service",
         "label": "Cassandra Service Process",
-        "description": "This host-level alert is triggered if the BDSE service cannot be determined to be up.",
+        "description": "This host-level alert is triggered if the Cassandra service cannot be determined to be up.",
         "interval": 1,
         "scope": "HOST",
         "source": {

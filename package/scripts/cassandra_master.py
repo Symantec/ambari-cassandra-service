@@ -15,7 +15,7 @@ class Cassandra_Master(Script):
     def install(self, env):
         import params
         env.set_params(params)
-        print 'Install the Master'
+        print 'Install'
         self.install_packages(env)
     def configure(self, env):
         import params

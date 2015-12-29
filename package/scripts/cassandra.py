@@ -17,7 +17,6 @@ def cassandra():
               group=params.user_group,
               recursive=True
           )
-
     configurations = params.config['configurations']['cassandra-site']
 
     File(format("{conf_dir}/cassandra.yaml"),
@@ -26,3 +25,4 @@ def cassandra():
                         configurations = configurations),
        owner=params.cassandra_user,
        group=params.user_group 
+    )

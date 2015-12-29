@@ -3,7 +3,7 @@
 
 
 <configuration supports_final="true">
-	<!-- Health Check Configurations -->
+
 	<property>
 		<name>template</name>
 		<value>Welcome, %s!</value>
@@ -15,12 +15,7 @@
 		<value>Test Cluster</value>
 		<description>Cluster name identifies your cluster. </description>
 	</property>
-	<property>
-		<name>node_master</name>
-		<value>true</value>
-		<description>Allow this node to be eligible as a seed node
-		</description>
-	</property>
+
 	<property>
 		<name>num_tokens</name>
 		<value>256</value>
@@ -456,7 +451,7 @@
 	<property>
 		<name>seed_provider_parameters_seeds</name>
 		<value></value>
-		<description>Prove values in quotes</description>
+		<description>Provide values in quotes</description>
 	</property>
 	<property>
 		<name>seed_provider_class_name</name>
