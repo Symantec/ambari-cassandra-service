@@ -21,7 +21,7 @@ ssh root@sandbox.hortonworks.com
 - To download the Cassandra service folder, run below
 ```
 VERSION=`hdp-select status hadoop-client | sed 's/hadoop-client - \([0-9]\.[0-9]\).*/\1/'`
-sudo git clone https://github.com/ajak6/ambari-cassandra-service.git   /var/lib/ambari-server/resources/stacks/HDP/$VERSION/services/CASSANDRA   
+sudo git clone https://github.com/Symantec/ambari-cassandra-service.git   /var/lib/ambari-server/resources/stacks/HDP/$VERSION/services/CASSANDRA   
 ```
 - Restart Ambari
 ```
